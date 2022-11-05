@@ -1,0 +1,64 @@
+* {
+  padding: 10px 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.nav {
+  display: none;
+}
+
+.grid-comtainer {
+  display: grid;
+  width: 100%;
+}
+.grid-comtainer__image {
+  background-image: url(./challenge.png);
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  margin: auto;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid black;
+}
+.grid-comtainer__item {
+  background-color: purple;
+  color: white;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin: 10px 0;
+  height: 50px;
+}
+.grid-comtainer .employment {
+  height: 100px;
+}
+
+@media screen and (min-width: 800px) {
+  .grid-comtainer {
+    display: grid;
+    grid-template-areas: "picture about" "picture hobbies" "picture contact" "employment employment" "employment employment" "education education";
+  }
+  .grid-comtainer__image {
+    grid-area: picture;
+  }
+  .grid-comtainer .about {
+    grid-area: about;
+  }
+  .grid-comtainer .hobbies {
+    grid-area: hobbies;
+  }
+  .grid-comtainer .contact {
+    grid-area: contact;
+  }
+  .grid-comtainer .employment {
+    grid-area: employment;
+  }
+  .grid-comtainer .education {
+    grid-area: education;
+  }
+  .nav {
+    display: flex;
+    justify-content: space-between;
+  }
+}/*# sourceMappingURL=challenge2.css.map */

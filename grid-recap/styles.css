@@ -1,0 +1,49 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    grid-area: header;
+    /* height: 7rem; */
+    background-color: blue;
+}
+
+/* nav,
+main,
+aside {
+    height: 15rem;
+
+} */
+
+nav { 
+    grid-area: menu;
+    background-color: lightblue;
+}
+
+main { 
+    grid-area: main;
+    background-color: grey; 
+}
+
+aside {
+    grid-area: footer;
+    background-color: lightgreen;
+}
+
+
+
+@media screen and (min-width: 800px) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 1fr 9fr;
+        height: 100vh;
+    }
+
+    header {
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+} 

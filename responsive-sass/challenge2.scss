@@ -1,0 +1,70 @@
+
+* {
+    padding: 10px 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  .nav{
+    
+    display: none;
+  }
+  .grid-comtainer {
+    display: grid;
+    width: 100%;
+    &__image{
+        background-image: url(./challenge.png);
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        margin: auto;
+        background-size: cover;
+        background-position: center;
+        border: 2px solid black;
+      }
+      &__item{
+        background-color: purple;
+        color: white;
+        font-family: sans-serif;
+        font-weight: bold;
+        margin: 10px 0;
+        height: 50px;
+    }
+    .employment{
+        height: 100px;
+    }
+  }
+  @media screen and (min-width: 800px) {
+    .grid-comtainer{
+        display: grid;
+        grid-template-areas:
+        "picture about"
+        "picture hobbies"
+        "picture contact"
+        "employment employment"
+        "employment employment"
+        "education education"
+    ;
+        &__image{
+            grid-area: picture;
+        }
+        .about{
+            grid-area: about;
+        }
+        .hobbies{
+            grid-area: hobbies;
+        }
+        .contact{
+            grid-area: contact;
+        }
+        .employment{
+            grid-area: employment;
+        }
+        .education{
+            grid-area: education;
+        }
+    }
+    .nav{
+        display: flex;
+        justify-content: space-between;
+    }
+  }

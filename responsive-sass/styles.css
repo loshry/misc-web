@@ -1,0 +1,73 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+  display: none;
+}
+
+.grid-container {
+  display: grid;
+  gap: 10px;
+  grid-template-areas: "image" "about" "hobbies" "contact" "employment" "education";
+}
+.grid-container_image {
+  grid-area: image;
+  height: 50px;
+  width: 50px;
+  -o-object-fit: fill;
+     object-fit: fill;
+  border-radius: 50%;
+  background-image: url(./challenge.png);
+  background-size: cover;
+  background-position: center;
+  border: 2px solid black;
+}
+.grid-container_item {
+  margin: 0 10px;
+  padding: 20px;
+  color: white;
+  background-color: purple;
+}
+.grid-container_about {
+  grid-area: about;
+}
+.grid-container_hobbies {
+  grid-area: hobbies;
+}
+.grid-container_contact {
+  grid-area: contact;
+}
+.grid-container_employment {
+  grid-area: employment;
+}
+.grid-container_education {
+  grid-area: education;
+}
+
+@media screen and (min-width: 800px) {
+  .main-header {
+    background-color: purple;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+  .main-header .header-linklists {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+  }
+  .main-header .header-linklists .header__link {
+    color: white;
+  }
+  .grid-container {
+    display: grid;
+    height: 100vh;
+    gap: 10px;
+    grid-template-areas: "image about" "image hobbies" "image contact" "employment employment" "education education";
+  }
+}/*# sourceMappingURL=styles.css.map */

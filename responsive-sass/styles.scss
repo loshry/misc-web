@@ -1,0 +1,99 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+$primary-color: white;
+$secondary-color: black;
+$background-color: purple;
+$background-color-header: black;
+
+header {
+  display: none;
+}
+
+.grid-container {
+  display: grid;
+  gap: 10px;
+  grid-template-areas:
+    "image"
+    "about"
+    "hobbies"
+    "contact"
+    "employment"
+    "education";
+
+   
+  &_image {
+    grid-area: image;
+    height: 50px;
+    width: 50px;
+    object-fit: fill;
+    border-radius: 50%;
+    background-image: url(./challenge.png);
+    background-size: cover;
+    background-position: center;
+    border: 2px solid black;
+  }
+
+  &_item {
+    margin: 0 10px;
+    padding: 20px;
+    color: $primary-color;
+    background-color: $background-color;
+  }
+
+  &_about {
+    grid-area: about;
+  }
+
+  &_hobbies {
+    grid-area: hobbies;
+  }
+
+  &_contact {
+    grid-area: contact;
+  }
+
+  &_employment {
+    grid-area: employment;
+  }
+  &_education {
+    grid-area: education;
+  }
+}
+
+@media screen and (min-width: 540px) and (max-width: 800px) {
+}
+
+@media screen and (min-width: 800px) {
+  .main-header {
+    background-color: $background-color;
+    color: $primary-color;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    .header-linklists {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      background-color: $background-color-header;
+      .header__link {
+        color: $primary-color;
+      }
+    }
+  }
+  .grid-container {
+    display: grid;
+    height: 100vh;
+    gap: 10px;
+    grid-template-areas:
+      "image about"
+      "image hobbies"
+      "image contact"
+      "employment employment"
+      "education education";
+  }
+}
